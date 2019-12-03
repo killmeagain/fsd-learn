@@ -1,0 +1,12 @@
+.color-list__item {
+    margin-top: 33px;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 70px;
+        height: 70px;
+
+        position: absolute;
+    }
+}

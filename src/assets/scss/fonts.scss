@@ -27,3 +27,13 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: "Quicksand Regular";
+    src: url('/assets/fonts/Quicksand/Quicksand-Regular.eot') format('embedded-type'),
+         url('/assets/fonts/Quicksand/Quicksand-Regular.ttf') format('truetype'),
+         url('/assets/fonts/Quicksand/Quicksand-Regular.woff') format('woff'),
+         url('/assets/fonts/Quicksand/Quicksand-Regular.svg#Quicksand-Regular') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}

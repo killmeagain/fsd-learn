@@ -1,0 +1,37 @@
+ul.color-list
+    -
+        let colorArray = [
+            {
+                title: "Dark Shade 100%",
+                color: "#1F2041"
+            },
+            {
+               title: "Dark Shade 75%",
+                color: "#1F2041" 
+            },
+            {
+                title: "Dark Shade 50%",
+                color: "#1F2041"
+            },
+            {
+                title: "Dark Shade 25%",
+                color: "#1F2041"
+            },
+            {
+                title: "Dark Shade 5%",
+                color: "#1F2041"
+            },
+            {
+                title: "Purple",
+                color: "#BC9CFF"
+            },
+            {
+                title: "Green",
+                color: "#6FCF97"
+            }
+        ];
+    for color in colorArray
+        li.color-list__item
+            include ../../components/itemWidget/itemWidget
+            +itemWidget(color.title)
+            p.color-list__color-hash= color.color

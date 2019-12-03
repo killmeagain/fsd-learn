@@ -1,0 +1,16 @@
+.color-and-types {
+    margin: 0;
+    padding: 0;
+
+    &__logo {
+        padding-top: 30px;
+        padding-left: 30px;
+    }
+}
+
+@import "../description/description.scss";
+@import "../itemWidget/itemWidget.scss";
+@import "../labelTitle/labelTitle.scss";
+@import "../logo/logo.scss";
+@import "../titleWidget/titleWidget.scss";
+@import "../components/colorList/colorList.scss";
