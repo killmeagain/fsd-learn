@@ -1,12 +1,31 @@
 .color-list__item {
-    margin-top: 33px;
+    margin-top: 38px;
     position: relative;
 
     &::before {
         content: '';
         width: 70px;
         height: 70px;
+        border-radius: 6px;
+
+        bottom: -10px;
+        left: -110px;
+
+        background-color: #000000;
 
         position: absolute;
+    }
+
+    &:first-child {
+        margin: 0;
+    }
+
+    $color: ($darkShadeBlack, $darkShadeGray, $darkShadeHalf, $darkShadeFourth, $darkShadeLight, $purple, $green);
+    $i: 1;
+    @each $bgColor in $color {
+        &:nth-child(#{$i})::before {
+            background-color: $bgColor;
+        }
+        $i: $i + 1;
     }
 }

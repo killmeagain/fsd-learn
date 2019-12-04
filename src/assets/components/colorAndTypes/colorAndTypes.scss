@@ -6,6 +6,16 @@
         padding-top: 30px;
         padding-left: 30px;
     }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        max-width: 1500px;
+        width: 100%;
+        padding-left: 102px;
+        margin: 0 auto;
+    }
 }
 
 @import "../description/description.scss";
@@ -13,4 +23,5 @@
 @import "../labelTitle/labelTitle.scss";
 @import "../logo/logo.scss";
 @import "../titleWidget/titleWidget.scss";
-@import "../components/colorList/colorList.scss";
+@import "../colorList/colorList.scss";
+@import "../titleList/titleList.scss";

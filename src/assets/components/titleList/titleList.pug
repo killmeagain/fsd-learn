@@ -1,0 +1,13 @@
+ul.title-list
+    li.title-list__item
+        include ../titleWidget/titleWidget
+        +titleWidget("This one is the sub-section or widget title")
+    li.title-list__item
+        include ../itemWidget/itemWidget
+        +itemWidget("Next one is the item title inside widgets")
+    li.title-list__item
+        include ../labelTitle/labelTitle
+        +labelTitle("This is a label or CTA text")
+    li.title-list__item
+        include ../description/description
+        +description("This is the body text which is used for most of the design, like paragraphs, lists, etc.")

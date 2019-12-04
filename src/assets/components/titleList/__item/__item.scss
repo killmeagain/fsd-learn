@@ -1,0 +1,48 @@
+.title-list__item {
+    margin-top: 50px;
+    position: relative;
+
+    &:first-child {
+        margin: 0;
+    }
+
+    &:nth-child(2) {
+        max-width: 330px;
+        width: 100%;
+    }
+
+    &:last-child {
+        max-width: 310px;
+        width: 100%;
+
+        margin-top: 48px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: -58px;
+
+        color: $darkShadeFourth;
+        font-family: $monseratRegular;
+        text-align: right;
+    }
+
+    $titleName: (H1, $bigTitle, 29px, none, -58px),
+                (H2, $middleTitle, 23px, none, -56px),
+                (H3, $smallTitle, $smallTitleLineHeight, uppercase, -46px),
+                (Body, $body, $middleTitleLineHeight, none, -66px);
+    $i: 1;
+    @each $title, $fontSize, $lineHeight, $textTransform, $left in $titleName{
+        &:nth-child(#{$i})::before { 
+            content: '#{$title}';
+            left: #{$left};
+
+            font-size: #{$fontSize};
+            line-height: #{$lineHeight};
+            text-transform: #{$textTransform};
+        }
+        $i: $i + 1;
+    }
+    
+}
