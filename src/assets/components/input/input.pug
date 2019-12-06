@@ -1,0 +1,6 @@
+mixin input(props={})
+    - const {value, placeholder, modify} = props;
+    if modify
+        input.input(value = value, placeholder = placeholder class = `input${modify}`)
+    else
+        input.input(value = value, placeholder = placeholder)

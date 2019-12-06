@@ -1,0 +1,33 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Form Elements
+    body.form-elements
+        include ../formInputs/formInputs
+        +formInputs({
+            title: "text field",
+            description: "default",
+            placeholder: "Email",
+        })
+
+        include ../formInputs/formInputs
+        +formInputs({
+            title: "text field",
+            description: "hover/focus",
+            placeholder: "Email",
+            modify: "_hover_and_focus",
+            value: "This is pretty awesome"
+        })
+
+        include ../formInputs/formInputs
+        +formInputs({
+            title: "Dropdown",
+            description: "default",
+            placeholder: "Сколько гостей",
+            modify: "_dropdown",
+            value: "Сколько гостей"
+        })
+        

@@ -1,0 +1,8 @@
+.form-input {
+    max-width: 320px;
+    width: 100%;
+
+    @import "./__header-label/__header-label.scss";
+    @import "./__description/__description.scss";
+    @import "./__label/__label.scss";
+}

@@ -1,0 +1,11 @@
+mixin formInputs(props={})
+    - const {title, description, modify} = props;
+    .form-input
+        label.form-input__label(class=`form-input__label${modify}`)
+            .form-input__header-label
+                include ../labelTitle/labelTitle
+                +labelTitle(title)
+                if description
+                    span.form-input__description= description
+            include ../input/input
+            +input(props)

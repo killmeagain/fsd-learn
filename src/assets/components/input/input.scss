@@ -1,0 +1,37 @@
+.input {
+    box-sizing: border-box;
+
+    max-width: 320px;
+    width: 100%;
+    min-height: 44px;
+
+    padding: 0 15px;
+
+    border: 1px solid $darkShadeFourth;
+    border-radius: 4px;
+
+    outline: none;
+
+    font-family: $monseratRegular;
+    font-size: $body;
+    font-weight: 600;
+
+    color: $darkShadeGray;
+    line-height: 18px;
+
+    &::placeholder {
+        font-family: $monseratRegular;
+        font-size: $body;
+        font-weight: 600;
+
+        color: $darkShadeFourth;
+    }
+
+    &:hover,
+    &:focus {
+        border-color: $darkShadeHalf;
+    }
+
+    @import "./_hover_and_focus/hover_and_focus.scss";
+    @import "./_dropdown/_dropdown.scss";
+}
