@@ -1,17 +1,17 @@
-&_dropdown {
+&__input {
     position: relative;
 
     &::after {
         content: '';
         position: absolute;
-        top: 70%;
-        right: 5%;
+        top: 16px;
+        right: 15px;
 
         width: 7px;
         height: 7px;
 
-        border-right: 2px solid $darkShadeHalf;
         border-bottom: 2px solid $darkShadeHalf;
+        border-right: 2px solid $darkShadeHalf;
 
         transform: rotate(45deg);
     }

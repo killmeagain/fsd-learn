@@ -1,7 +1,6 @@
 .input {
     box-sizing: border-box;
-
-    max-width: 320px;
+    
     width: 100%;
     min-height: 44px;
 
@@ -33,5 +32,7 @@
     }
 
     @import "./_hover_and_focus/hover_and_focus.scss";
-    @import "./_dropdown/_dropdown.scss";
+    @import "./_font-weight/font-weight.scss";
+    @import "./_color-placeholder/_color-placeholder.scss";
+    @import "./_border-top/border-top";
 }

@@ -1,0 +1,14 @@
+.dropdown {
+    max-width: 320px;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    @import "./__description/__description.scss";
+    @import "./__header-label/__header-label.scss";
+    @import "./__input/__input.scss";
+    @import "./__menu/__menu.scss";
+    @import "./__item/__item.scss";
+    @import "./__button/__button.scss";
+    @import "./__controls/__controls.scss"
+}

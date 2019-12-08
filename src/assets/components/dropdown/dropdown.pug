@@ -1,0 +1,22 @@
+mixin dropdown(props={})
+    - const {title, description, modify, itemDropdown} = props;
+    .dropdown(class=`form-input${modify}`)
+        label
+            .dropdown__header-label
+                include ../labelTitle/labelTitle
+                +labelTitle(title)
+                if description
+                    span.dropdown__description= description
+            .dropdown__input
+                include ../input/input
+                +input(props)
+                ul.dropdown__menu
+                    for item in itemDropdown
+                        li.dropdown__item
+                            +labelTitle(item)
+                            .dropdown__controls
+                                button.dropdown__button(type="button") -
+                                span.dropdown__counter 0
+                                button.dropdown__button(type="button") +
+                
+

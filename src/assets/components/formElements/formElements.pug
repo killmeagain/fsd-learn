@@ -18,16 +18,52 @@ html(lang="ru")
             title: "text field",
             description: "hover/focus",
             placeholder: "Email",
-            modify: "_hover_and_focus",
+            modifyInput: "_hover_and_focus",
             value: "This is pretty awesome"
         })
 
-        include ../formInputs/formInputs
         +formInputs({
-            title: "Dropdown",
+            dropdown: true,
+            title: "dropdown",
             description: "default",
-            placeholder: "Сколько гостей",
-            modify: "_dropdown",
+            placeholder: "Email",
+            modifyInput: "_font-weight",
             value: "Сколько гостей"
+        })
+
+        +formInputs({
+            title: "masked text field",
+            description: "default",
+            placeholder: "ДД.ММ.ГГГГ"
+        })
+
+        include ../dateDropdown/dateDropdown
+
+        +formInputs({
+            dropdown: true,
+            title: "filter date dropdown",
+            placeholder: "19 авг - 23 авг",
+            modify: "_width_small",
+            modifyInput: "_color-placeholder"
+        })
+
+        
+
+        .form-input.form-input_width_small
+            .form-input__header-label
+                include ../labelTitle/labelTitle
+                +labelTitle("subscription text field")
+            include ../subscriptionTextField/subscriptionTextField 
+        include ../dropdown/dropdown
+        +dropdown({
+            title: "dropdown",
+            description: "default",
+            itemDropdown: [
+                "Спальни",
+                "Кровати",
+                "Ванные комнаты"
+            ],
+            placeholder: "Сколько гостей",
+            modifyInput: "_border-top"
         })
         
