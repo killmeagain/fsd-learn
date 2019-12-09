@@ -1,6 +1,6 @@
 mixin dropdown(props={})
     - const {title, description, modify, itemDropdown} = props;
-    .dropdown(class=`form-input${modify}`)
+    .dropdown
         label
             .dropdown__header-label
                 include ../labelTitle/labelTitle
@@ -10,13 +10,13 @@ mixin dropdown(props={})
             .dropdown__input
                 include ../input/input
                 +input(props)
-                ul.dropdown__menu
-                    for item in itemDropdown
-                        li.dropdown__item
-                            +labelTitle(item)
-                            .dropdown__controls
-                                button.dropdown__button(type="button") -
-                                span.dropdown__counter 0
-                                button.dropdown__button(type="button") +
+        ul.dropdown__menu
+            for item in itemDropdown
+                li.dropdown__item
+                    +labelTitle(item)
+                    .dropdown__controls
+                        button.dropdown__button(type="button") -
+                        span.dropdown__counter 0
+                        button.dropdown__button(type="button") +
                 
 

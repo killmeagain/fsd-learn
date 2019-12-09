@@ -7,7 +7,7 @@
     width: 100%;
     min-height: 119px;
 
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
 
@@ -22,5 +22,5 @@
 
     padding: 7px 7px 8px 15px;
 
-    display: none;
+    @import "./_active-dropdown/_active-dropdown.scss"
 }

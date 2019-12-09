@@ -4,6 +4,8 @@
 
     box-sizing: border-box;
 
+    position: relative;
+
     @import "./__description/__description.scss";
     @import "./__header-label/__header-label.scss";
     @import "./__input/__input.scss";
