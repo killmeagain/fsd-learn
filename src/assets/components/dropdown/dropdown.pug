@@ -1,22 +1,20 @@
 mixin dropdown(props={})
     - const {title, description, modify, itemDropdown} = props;
     .dropdown
-        label
-            .dropdown__header-label
-                include ../labelTitle/labelTitle
-                +labelTitle(title)
-                if description
-                    span.dropdown__description= description
-            .dropdown__input
-                include ../input/input
-                +input(props)
-        ul.dropdown__menu
-            for item in itemDropdown
-                li.dropdown__item
-                    +labelTitle(item)
-                    .dropdown__controls
-                        button.dropdown__button(type="button") -
-                        span.dropdown__counter 0
-                        button.dropdown__button(type="button") +
+        .iqdropdown.dropdown__input
+            p.iqdropdown-selection.dropdown__placeholder
+            .iqdropdown-menu.dropdown__menu
+                .iqdropdown-menu-option.dropdown__item(data-id = 1)
+                    div.dropdown__wrapper
+                        include ../labelTitle/labelTitle
+                        +labelTitle(title)(class = "iqdropdown-item")
+                .iqdropdown-menu-option.dropdown__item(data-id = 2)
+                    div.dropdown__wrapper
+                        include ../labelTitle/labelTitle
+                        +labelTitle(title)(class = "iqdropdown-item")
+                .iqdropdown-menu-option.dropdown__item(data-id = 3)
+                    div.dropdown__wrapper
+                        include ../labelTitle/labelTitle
+                        +labelTitle(title)(class = "iqdropdown-item")
                 
 

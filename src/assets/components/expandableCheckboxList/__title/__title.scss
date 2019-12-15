@@ -1,0 +1,21 @@
+&__title {
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 3px;
+        right: 15px;
+
+        width: 7px;
+        height: 7px;
+
+        border-bottom: 2px solid $darkShadeGray;
+        border-right: 2px solid $darkShadeGray;
+
+        transform: rotate(45deg);
+    }
+
+    @import "./_arrow-up/_arrow-up.scss";
+}

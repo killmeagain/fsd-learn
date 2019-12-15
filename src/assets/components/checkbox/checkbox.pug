@@ -1,0 +1,6 @@
+mixin checkbox(props = {})
+    - const {text} = props
+    label.checkbox
+        input.checkbox__input(type = "checkbox")&attributes(attributes)
+        span.checkbox__box
+        span.checkbox__title= text

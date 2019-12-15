@@ -1,0 +1,6 @@
+.checkbox-buttons {
+    width: 222px;
+    
+    @import "../checkboxButtons/__list/_list.scss";
+    @import "../checkboxButtons/__item/_item.scss";
+}

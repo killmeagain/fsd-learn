@@ -1,0 +1,26 @@
+&__box {
+    width: 20px;
+    height: 20px;
+
+    border: 1px solid $darkShadeFourth;
+    border-radius: 4px;
+
+    box-sizing: border-box;
+
+    display: block;
+    margin-right: 10px;
+
+    flex-shrink: 0;
+}
+
+&__box:hover {
+    border-color: $purple;
+}
+
+&__input:checked + &__box {
+    border-color: $purple;
+    background-image: url("/assets/img/checked.svg");
+    background-repeat: no-repeat;
+    background-position: 56% 38%;
+    background-size: 11px 11px;
+}

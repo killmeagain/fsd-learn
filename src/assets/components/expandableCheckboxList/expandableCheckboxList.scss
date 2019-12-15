@@ -1,0 +1,8 @@
+.expandable-checkbox-list {
+    width: 266px;
+    position: relative;
+
+    @import "./__title/_title.scss";
+    @import "./__list/__list.scss";
+    @import "./__item/_item.scss";
+}

@@ -56,14 +56,15 @@ html(lang="ru")
             include ../subscriptionTextField/subscriptionTextField 
         include ../dropdown/dropdown
         +dropdown({
-            title: "dropdown",
-            description: "default",
-            itemDropdown: [
-                "Спальни",
-                "Кровати",
-                "Ванные комнаты"
-            ],
-            placeholder: "Сколько гостей",
-            modifyInput: "_border-top"
+            title: "Спальни"
         })
-        
+        include ../checkboxButtons/checkboxButtons
+        +checkboxButtons
+
+        include ../expandableCheckboxList/expandableCheckboxList
+        +expandableCheckboxList
+
+        +expandableCheckboxList({
+            modifyList: 'expandable-checkbox-list__list_active',
+            modifyTitle: 'expandable-checkbox-list__title_arrow-up'
+        })

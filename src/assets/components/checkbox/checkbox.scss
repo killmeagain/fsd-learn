@@ -1,0 +1,8 @@
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+
+    @import "../checkbox/__title/__title.scss";
+    @import "../checkbox/__input/__input.scss";
+    @import "../checkbox/__box/__box.scss"
+}

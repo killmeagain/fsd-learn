@@ -1,0 +1,21 @@
+mixin checkboxButtons(props = {})
+    .checkbox-buttons
+        .checkbox-buttons__title
+            include ../labelTitle/labelTitle
+            +labelTitle('checkbox buttons')
+        ul.checkbox-buttons__list
+            li.checkbox-buttons__item
+                include ../checkbox/checkbox
+                +checkbox({
+                    text: 'Можно курить'
+                })
+            li.checkbox-buttons__item
+                include ../checkbox/checkbox
+                +checkbox({
+                    text: 'Можно с питомцами'
+                })(checked)
+            li.checkbox-buttons__item
+                include ../checkbox/checkbox
+                +checkbox({
+                    text: 'Можно пригласить гостей (до 10 человек)'
+                })(checked)

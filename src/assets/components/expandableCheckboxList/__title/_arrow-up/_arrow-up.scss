@@ -1,0 +1,7 @@
+&_arrow-up::before {
+    border: 0;
+    border-top: 2px solid $darkShadeGray;
+    border-left: 2px solid $darkShadeGray;
+
+    top: 6px;
+}
