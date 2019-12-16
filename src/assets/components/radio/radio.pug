@@ -1,0 +1,6 @@
+mixin radio(props = {})
+    - const {title, name, value} = props;
+    label.radio
+        input.radio__input(type = "radio" name=name value=value)&attributes(attributes)
+        span.radio__box
+        span.radio__title= title

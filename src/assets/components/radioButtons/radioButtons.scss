@@ -1,0 +1,8 @@
+.radio-buttons {
+    max-width: 220px;
+    width: 100%;
+
+    @import "./__button/__button.scss";
+    @import "./__title/__title.scss";
+    @import "./__button-wrapper/_button-wrapper.scss";
+}

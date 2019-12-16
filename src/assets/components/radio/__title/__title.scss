@@ -1,0 +1,13 @@
+&__title {
+    font-family: $monseratRegular;
+    font-size: $body;
+    line-height: 24px;
+
+    color: $darkShadeHalf;
+
+    padding-top: 1px;
+}
+
+&__input:checked ~ &__title {
+    color: $darkShadeGray;
+}

@@ -1,0 +1,39 @@
+&__box {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+
+    border: 1px solid $darkShadeFourth;
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+    display: block;
+    margin-right: -30px;
+
+    &:hover {
+        border-color: $purple;
+    }
+}
+
+&__input:checked + &__box {
+    border-color: $purple;
+}
+
+&__input:checked + &__box::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background-image: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+&__box::before {
+    content: none;
+}

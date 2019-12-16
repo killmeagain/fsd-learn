@@ -1,0 +1,8 @@
+.radio {
+    padding-left: 30px;
+
+    box-sizing: border-box;
+    @import "./__input/__input.scss";
+    @import "./__box/__box.scss";
+    @import "./__title/__title.scss";
+}
