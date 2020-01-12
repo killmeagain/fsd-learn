@@ -1,0 +1,26 @@
+&__item {
+    margin-bottom: 10px;
+
+    position: relative;
+
+    &::before {
+        content: '';
+
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+
+        background-color: $darkShadeFourth;
+
+        position: absolute;
+        left: -20px;
+        top: 7px;
+
+
+    }
+}
+
+&__item:last-child {
+    margin: 0;
+}

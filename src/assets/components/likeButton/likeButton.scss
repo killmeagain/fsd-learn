@@ -1,0 +1,22 @@
+.like-button {
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0;
+
+    border: 1px solid $darkShadeFourth;
+    border-radius: 10px;
+
+    min-width: 40px;
+    min-height: 18px;
+    padding-right: 5px;
+    
+
+    display: flex;
+    align-items: center;
+
+    @import "./_click/click.scss";
+    @import "./__img/__img.scss";
+    @import "./__image-container/__image-container.scss";
+    @import "./__text/__text.scss";
+}

@@ -1,0 +1,9 @@
+&__text {
+    font-family: $monseratRegular, sans-serif;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    color: $darkShadeFourth;
+
+    @import "./_click/_click.scss";
+}

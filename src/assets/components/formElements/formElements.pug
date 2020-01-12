@@ -75,3 +75,15 @@ html(lang="ru")
 
         include ../toggle/toggle
         +toggle
+
+        include ../likeButton/likeButton
+        +likeButton({
+            text: '2',
+            modify: 'click'
+        })
+
+        +likeButton({
+            text: '12',
+        })
+
+        include ../bulletList/bulletList
