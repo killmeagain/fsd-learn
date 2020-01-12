@@ -1,0 +1,12 @@
+.advantages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 280px;
+
+    @import "./__item/__item.scss";
+    @import "./__img-container/__img-container.scss";
+    @import "./__text/__text.scss";
+    @import "./__title/__title.scss";
+}
