@@ -1,0 +1,6 @@
+mixin linkButtons(props = {})
+    -const {href, text, modify} = props;
+    if (modify)
+        a.link-buttons(href = href, class = `link-buttons_${modify}`)= text
+    else
+        a.link-buttons(href = href)= text
