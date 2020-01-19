@@ -93,6 +93,13 @@ html(lang="ru")
         include ../linkButtons/linkButtons
         +linkButtons({
             href: "#",
-            text: "Click Me",
-            modify: "bground_white"
+            text: "Войти"
         })
+
+        include ../buttons/buttons
+        +buttons({
+            type: "button",
+            text: "Перейти к оплате"
+        })(class = "buttons_submit")
+
+        include ../pagination/pagination

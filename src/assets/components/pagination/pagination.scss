@@ -1,0 +1,13 @@
+.pagination {
+    width: 241px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @import "./__list/__list.scss";
+    @import "./__item/__item.scss";
+    @import "./__link/__link.scss";
+    @import "./__description/__description.scss";
+}

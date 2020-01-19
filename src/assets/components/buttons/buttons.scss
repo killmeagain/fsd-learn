@@ -1,0 +1,23 @@
+.buttons {
+    border: none;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: transparent;
+
+    display: inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+
+    font-family: $monseratBold, sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+
+    text-transform: uppercase;
+
+    color: $purple;
+
+    @import "./_color_grey/color_grey";
+    @import "./_submit/submit.scss";
+}
