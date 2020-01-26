@@ -1,12 +1,12 @@
 .dropdown {
-    max-width: 320px;
-    width: 100%;
-    height: 44px;
+    width: 266px;
+    position: relative;
 
-    box-sizing: border-box;
-
-    @import "./__input/_input.scss";
-    @import "./__placeholder/_placeholder.scss";
-    @import "./__menu/_menu.scss";
-    @import "./__item/_item.scss";
+    @import "./__input/__input.scss";
+    @import "./__list/__list.scss";
+    @import "./__item/__item.scss";
+    @import "./__button/__button.scss";
+    @import "./__controls/__controls.scss";
+    @import "./__index/__index.scss";
+    @import "./_width_big/_width_big.scss";
 }

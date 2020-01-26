@@ -1,16 +1,11 @@
 mixin formInputs(props={})
-    - const {title, description, dropdown, modify} = props;
-    .form-input(class=`form-input${modify}`)
+    - const {title, description} = props;
+    .form-input
         label
             .form-input__header-label
                 include ../labelTitle/labelTitle
                 +labelTitle(title)
                 if description
                     span.form-input__description= description
-            if dropdown == true
-                .form-input__input
-                    include ../input/input
-                    +input(props)
-            else
-                include ../input/input
-                +input(props)
+            include ../input/input
+            +input(props)

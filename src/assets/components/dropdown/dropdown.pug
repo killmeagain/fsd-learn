@@ -1,20 +1,31 @@
-mixin dropdown(props={})
-    - const {title, description, modify, itemDropdown} = props;
-    .dropdown
-        .iqdropdown.dropdown__input
-            p.iqdropdown-selection.dropdown__placeholder
-            .iqdropdown-menu.dropdown__menu
-                .iqdropdown-menu-option.dropdown__item(data-id = 1)
-                    div.dropdown__wrapper
+mixin dropdown(props = {}, ...titles)
+    -const {dropdownGuest} = props;
+    .dropdown&attributes(attributes)
+        .dropdown__input
+            include ../input/input
+            +input(props)(readonly)
+        ul.dropdown__list
+            each title in titles
+                li.dropdown__item
+                    .dropdown__title-item
                         include ../labelTitle/labelTitle
-                        +labelTitle(title)(class = "iqdropdown-item")
-                .iqdropdown-menu-option.dropdown__item(data-id = 2)
-                    div.dropdown__wrapper
-                        include ../labelTitle/labelTitle
-                        +labelTitle(title)(class = "iqdropdown-item")
-                .iqdropdown-menu-option.dropdown__item(data-id = 3)
-                    div.dropdown__wrapper
-                        include ../labelTitle/labelTitle
-                        +labelTitle(title)(class = "iqdropdown-item")
-                
+                        +labelTitle(title)
+                    .dropdown__controls
+                        button.dropdown__button.js-dropdown__decrement-button -
+                        input.dropdown__index(name = "index" value = "0", readonly)
+                        button.dropdown__button.js-dropdown__increment-button +
+            if dropdownGuest
+                li.dropdown__item.dropdown__item_padding-bottom_big
+                    .dropdown__button-clear
+                        include ../buttons/buttons
+                        +buttons({
+                            type: "button",
+                            text: "Очистить"
+                        })(class = 'buttons_color_grey buttons_not-active')
+                    .dropdown__button-apply
+                        +buttons({
+                            type: "button",
+                            text: "Применить"
+                        })
 
+        

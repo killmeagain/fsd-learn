@@ -6,61 +6,54 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Form Elements
     body.form-elements
-        include ../formInputs/formInputs
-        +formInputs({
-            title: "text field",
-            description: "default",
-            placeholder: "Email",
-        })
 
         include ../formInputs/formInputs
         +formInputs({
+            value: "",
+            placeholder: "Email",
+            title: "text field",
+            description: "default"
+        })
+
+        +formInputs({
+            value: "This is pretty awesome",
+            placeholder: "Email",
             title: "text field",
             description: "hover/focus",
-            placeholder: "Email",
-            modifyInput: "_hover_and_focus",
-            value: "This is pretty awesome"
+            modifyInput: "hover_and_focus"
         })
 
-        +formInputs({
-            dropdown: true,
-            title: "dropdown",
-            description: "default",
-            placeholder: "Email",
-            modifyInput: "_font-weight",
-            value: "Сколько гостей"
-        })
 
         +formInputs({
+            value: "",
+            placeholder: "ДД.ММ.ГГГГ",
             title: "masked text field",
-            description: "default",
-            placeholder: "ДД.ММ.ГГГГ"
+            description: "default"
         })
 
-        include ../dateDropdown/dateDropdown
-
-        +formInputs({
-            dropdown: true,
-            title: "filter date dropdown",
-            placeholder: "19 авг - 23 авг",
-            modify: "_width_small",
-            modifyInput: "_color-placeholder"
-        })
-
-        
-
-        .form-input.form-input_width_small
-            .form-input__header-label
-                include ../labelTitle/labelTitle
-                +labelTitle("subscription text field")
-            include ../subscriptionTextField/subscriptionTextField 
+        //- Дропдаун
         include ../dropdown/dropdown
         +dropdown({
-            title: "Спальни"
-        })
+            value: "2 cпальни, 2 кровати...",
+            modifyInput: "font-weight input_border-top"
+
+        }, "Спальни", "Кровати", "Ванные комнаты")
+
+        +dropdown({
+            value: "Сколько гостей",
+            modifyInput: "font-weight input_border-top",
+            dropdownGuest: true
+
+        }, "Взрослые", "Дети", "Младенцы")(class = "dropdown_width_big")
+
+
+        //- Checkbox Buttons
         include ../checkboxButtons/checkboxButtons
         +checkboxButtons
 
+
+
+        //- Выпадающий список с доп. услугами
         include ../expandableCheckboxList/expandableCheckboxList
         +expandableCheckboxList
 
@@ -70,12 +63,17 @@ html(lang="ru")
         })
 
         
+        //- Radio Buttons
         include ../radioButtons/radioButtons
         +radioButtons
 
+
+        //- Toggle Buttons
         include ../toggle/toggle
         +toggle
 
+
+        //- Like Buttons
         include ../likeButton/likeButton
         +likeButton({
             text: '2',
@@ -86,20 +84,26 @@ html(lang="ru")
             text: '12',
         })
 
+
+        //- Список запретов
         include ../bulletList/bulletList
 
+
+        //- Удобства
         include ../advantages/advantages
 
+
+        //- Buttons
         include ../linkButtons/linkButtons
         +linkButtons({
             href: "#",
             text: "Войти"
         })
-
         include ../buttons/buttons
         +buttons({
             type: "button",
             text: "Перейти к оплате"
         })(class = "buttons_submit")
 
+        //- Pagination
         include ../pagination/pagination

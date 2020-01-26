@@ -1,6 +1,23 @@
-mixin input(props={})
+mixin input(props = {})
     - const {value, placeholder, modifyInput} = props;
-    if modifyInput
-        input.input(value = value, placeholder = placeholder class = `input${modifyInput}`)
+    if (modifyInput)
+        input.input(value = value, placeholder = placeholder, class = `input_${modifyInput}`)&attributes(attributes)
     else
-        input.input(value = value, placeholder = placeholder)
+        input.input(value = value, placeholder = placeholder)&attributes(attributes)
+
+
+
+//- Гайд по блоку!!!!!!!!
+//- Значение value передает значение, которое будет содержать инпут!!!!
+//- Значение placeholder передает значение, которое будет отображаться в placeholder инпута!!!!
+//- Как использовать:
+//- +input({
+//-     value: "",
+//-     placeholder: "Email"
+//- })(class = "(modicator)")
+
+//- Модификаторы:
+//- _font-weigth - устанавливает вес шрифта на 400
+//- _color-placeholder - устанавливает прозрачность серого цвета на 0.75
+//- _hover-and-focus - устанавливает параметры при наведении и фокусе
+//- _border-top - устанавливает радиус скругления только для верхних углов инпута
