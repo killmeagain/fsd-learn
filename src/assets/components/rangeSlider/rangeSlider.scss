@@ -1,0 +1,9 @@
+.range-slider {
+    max-width: 266px;
+    width: 100%;
+
+    @import "./__header/__header.scss";
+    @import "./__input/__input.scss";
+    @import "./__slider/__slider.scss";
+    @import "resetNoUiSlider.scss";
+}

@@ -1,0 +1,83 @@
+form.registration
+    .registration__wrapper
+        .registration__title
+            include ../titleWidget/titleWidget
+            +titleWidget("Регистрация аккаунта")
+        .registration__input-firstname
+            label.registration__label-input-password
+                include ../labelTitle/labelTitle
+                +labelTitle("Введите ваше имя")(class = "visually-hidden")
+                include ../input/input
+                +input({
+                    value: "",
+                    placeholder: "Имя",
+                    name: "firstname",
+                    type: "text"
+                })
+        .registration__input-surname
+            label.registration__label-input-password
+                include ../labelTitle/labelTitle
+                +labelTitle("Введите вашу фамилию")(class = "visually-hidden")
+                include ../input/input
+                +input({
+                    value: "",
+                    placeholder: "Фамилия",
+                    name: "surname",
+                    type: "text"
+                })
+        .registration__gender
+            include ../radioButtons/radioButtons
+            +radioButtons()
+        .registration__date-of-birth
+            include ../formInput/formInput
+            +formInput({
+                title: "Дата рождения",
+                value: "",
+                placeholder: "ДД.ММ.ГГГГ",
+                name: "date-of-birth",
+                type: "text"
+            })
+        .registration__login-data
+            .registration__subtitle
+                include ../labelTitle/labelTitle
+                +labelTitle("Данные для входа в сервис")
+            .registration__input-email
+                label.login__label-input-password
+                    include ../labelTitle/labelTitle
+                    +labelTitle("Введите ваш E-Mail")(class = "visually-hidden")
+                    include ../input/input
+                    +input({
+                        value: "",
+                        placeholder: "Email",
+                        name: "email",
+                        type: "text"
+                    })
+            .registration__input-password
+                label.login__label-input-password
+                    include ../labelTitle/labelTitle
+                    +labelTitle("Введите ваш пароль")(class = "visually-hidden")
+                    include ../input/input
+                    +input({
+                        value: "",
+                        placeholder: "Пароль",
+                        name: "password",
+                        type: "text"
+                    })
+        .registration__special-offers
+            include ../toggle/toggle
+            +toggle()
+        .registration__button-submit
+            include ../buttons/buttons
+            +buttons({
+                type: "submit",
+                text: "Перейти к оплате"
+            })(class = "buttons_submit")
+        .registration__login-link
+            span.registration__description-link Уже есть аккаунт на токсин
+            .registration__link-buttons
+                include ../linkButtons/linkButtons
+                +linkButtons({
+                    href: "#",
+                    text: "Войти",
+                    color: "white"
+                })

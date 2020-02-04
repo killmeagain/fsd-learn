@@ -1,0 +1,21 @@
+mixin formInput(props = {})
+    -const {title, status, dropdown} = props;
+    if (dropdown === true)
+        label.form-input
+            .form-input__title
+                include ../labelTitle/labelTitle
+                +labelTitle(title)
+                if (status) 
+                    span.form-input__status=status
+            .form-input__input
+                include ../input/input
+                +input(props)(readonly)
+    else
+        label.form-input
+            .form-input__title
+                include ../labelTitle/labelTitle
+                +labelTitle(title)
+                if (status) 
+                    span.form-input__status=status
+            include ../input/input
+            +input(props)

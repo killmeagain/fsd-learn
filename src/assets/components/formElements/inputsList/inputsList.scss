@@ -1,0 +1,7 @@
+.inputs-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @import "./__item/__item.scss";
+}

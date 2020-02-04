@@ -1,31 +1,55 @@
 mixin dropdown(props = {}, ...titles)
-    -const {dropdownGuest} = props;
+    -const {dropdownGuest, expanded} = props;
     .dropdown&attributes(attributes)
-        .dropdown__input
-            include ../input/input
-            +input(props)(readonly)
-        ul.dropdown__list
-            each title in titles
-                li.dropdown__item
-                    .dropdown__title-item
-                        include ../labelTitle/labelTitle
-                        +labelTitle(title)
-                    .dropdown__controls
-                        button.dropdown__button.js-dropdown__decrement-button -
-                        input.dropdown__index(name = "index" value = "0", readonly)
-                        button.dropdown__button.js-dropdown__increment-button +
-            if dropdownGuest
-                li.dropdown__item.dropdown__item_padding-bottom_big
-                    .dropdown__button-clear
-                        include ../buttons/buttons
-                        +buttons({
-                            type: "button",
-                            text: "Очистить"
-                        })(class = 'buttons_color_grey buttons_not-active')
-                    .dropdown__button-apply
-                        +buttons({
-                            type: "button",
-                            text: "Применить"
-                        })
+        include ../formInput/formInput
+        +formInput(props)
+        if (expanded === true)
+            ul.dropdown__list.dropdown__list_active
+                each title in titles
+                    li.dropdown__item
+                        .dropdown__title-item
+                            include ../labelTitle/labelTitle
+                            +labelTitle(title)
+                        .dropdown__controls
+                            button.dropdown__button.js-dropdown__decrement-button(type = "button") -
+                            input.dropdown__index(name = "index" value = "0", readonly)
+                            button.dropdown__button.js-dropdown__increment-button(type = "button") +
+                if dropdownGuest
+                    li.dropdown__item.dropdown__item_padding-bottom_big
+                        .dropdown__button-clear
+                            include ../buttons/buttons
+                            +buttons({
+                                type: "button",
+                                text: "Очистить"
+                            })(class = 'buttons_color_grey buttons_not-active')
+                        .dropdown__button-apply
+                            +buttons({
+                                type: "button",
+                                text: "Применить"
+                            })
+        else
+            ul.dropdown__list
+                each title in titles
+                    li.dropdown__item
+                        .dropdown__title-item
+                            include ../labelTitle/labelTitle
+                            +labelTitle(title)
+                        .dropdown__controls
+                            button.dropdown__button.js-dropdown__decrement-button(type = "button") -
+                            input.dropdown__index(name = "index" value = "0", readonly)
+                            button.dropdown__button.js-dropdown__increment-button(type = "button") +
+                if dropdownGuest
+                    li.dropdown__item.dropdown__item_padding-bottom_big
+                        .dropdown__button-clear
+                            include ../buttons/buttons
+                            +buttons({
+                                type: "button",
+                                text: "Очистить"
+                            })(class = 'buttons_color_grey buttons_not-active')
+                        .dropdown__button-apply
+                            +buttons({
+                                type: "button",
+                                text: "Применить"
+                            })
 
         

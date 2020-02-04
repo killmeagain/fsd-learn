@@ -1,0 +1,10 @@
+mixin rangeSlider(props = {})
+    -const {text} = props;
+    .range-slider
+        .range-slider__header
+            .range-slider__title
+                include ../labelTitle/labelTitle
+                +labelTitle(text)
+            .range-slider__output
+                input.range-slider__input(type = "text" name = "price" value = "" readonly)
+        .range-slider__slider

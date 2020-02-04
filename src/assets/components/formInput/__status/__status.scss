@@ -1,8 +1,8 @@
-&__description {
+&__status {
     font-family: $monseratRegular;
     font-size: $smallTitle;
+    line-height: $smallTitleLineHeight;
 
     color: $darkShadeHalf;
     text-transform: uppercase;
-    line-height: $smallTitleLineHeight;
 }

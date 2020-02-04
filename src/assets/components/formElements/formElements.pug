@@ -5,105 +5,64 @@ html(lang="ru")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         title Form Elements
-    body.form-elements
-
-        include ../formInputs/formInputs
-        +formInputs({
-            value: "",
-            placeholder: "Email",
-            title: "text field",
-            description: "default"
-        })
-
-        +formInputs({
-            value: "This is pretty awesome",
-            placeholder: "Email",
-            title: "text field",
-            description: "hover/focus",
-            modifyInput: "hover_and_focus"
-        })
-
-
-        +formInputs({
-            value: "",
-            placeholder: "ДД.ММ.ГГГГ",
-            title: "masked text field",
-            description: "default"
-        })
-
-        //- Дропдаун
-        include ../dropdown/dropdown
-        +dropdown({
-            value: "2 cпальни, 2 кровати...",
-            modifyInput: "font-weight input_border-top"
-
-        }, "Спальни", "Кровати", "Ванные комнаты")
-
-        +dropdown({
-            value: "Сколько гостей",
-            modifyInput: "font-weight input_border-top",
-            dropdownGuest: true
-
-        }, "Взрослые", "Дети", "Младенцы")(class = "dropdown_width_big")
-
-
-        //- Checkbox Buttons
-        include ../checkboxButtons/checkboxButtons
-        +checkboxButtons
-
-
-
-        //- Выпадающий список с доп. услугами
-        include ../expandableCheckboxList/expandableCheckboxList
-        +expandableCheckboxList
-
-        +expandableCheckboxList({
-            modifyList: 'expandable-checkbox-list__list_active',
-            modifyTitle: 'expandable-checkbox-list__title_arrow-up'
-        })
-
-        
-        //- Radio Buttons
-        include ../radioButtons/radioButtons
-        +radioButtons
-
-
-        //- Toggle Buttons
-        include ../toggle/toggle
-        +toggle
-
-
-        //- Like Buttons
-        include ../likeButton/likeButton
-        +likeButton({
-            text: '2',
-            modify: 'click'
-        })
-
-        +likeButton({
-            text: '12',
-        })
-
-
-        //- Список запретов
-        include ../bulletList/bulletList
-
-
-        //- Удобства
-        include ../advantages/advantages
-
-
-        //- Buttons
-        include ../linkButtons/linkButtons
-        +linkButtons({
-            href: "#",
-            text: "Войти"
-        })
-        include ../buttons/buttons
-        +buttons({
-            type: "button",
-            text: "Перейти к оплате"
-        })(class = "buttons_submit")
-
-        //- Pagination
-        include ../pagination/pagination
+    body
+        main.form-elements
+            .form-elements__logo
+                include ../logo/logo
+                +logo("assets/img/logo.svg")
+            .form-elements__content-wrapper
+                .form-elements__column
+                    .form-elements__inputs-list
+                        include ./inputsList/inputsList
+                    .form-elements__dropdown-date
+                        include ../dropdown-date/dropdown-date
+                    .form-elements__filter-dropdown-date
+                        include ../filter-dropdown-date/filter-dropdown-date
+                    .form-elements__subscription-text-field
+                        include ../subscriptionTextField/subscriptionTextField
+                    .form-elements__dropdown
+                        include ../dropdown/dropdown
+                        +dropdown({
+                            value: "",
+                            placeholder: "2 спальни, 2 кровати...",
+                            modifyInput: "border-top input_color-placeholder",
+                            dropdownGuest: true,
+                            dropdown: true,
+                            title: "dropdown",
+                            status: "default"
+                        }, "Спальни", "Кровати", "Ванные комнаты")
+                    .form-elements__dropdown-expanded
+                        include ../dropdown/dropdown
+                        +dropdown({
+                            value: "",
+                            placeholder: "2 спальни, 2 кровати...",
+                            modifyInput: "border-top input_color-placeholder input_hover_and_focus",
+                            dropdown: true,
+                            title: "dropdown",
+                            status: "expanded",
+                            expanded: true
+                        }, "Спальни", "Кровати", "Ванные комнаты")
+                    .form-elements__expandable-checkbox-list
+                        include ../expandableCheckboxList/expandableCheckboxList
+                        +expandableCheckboxList
+                    .form-elements__expandable-checkbox-list-expanded
+                        include ../expandableCheckboxList/expandableCheckboxList
+                        +expandableCheckboxList({
+                            modifyList: "expandable-checkbox-list__list_active",
+                            modifyTitle: "expandable-checkbox-list__title_arrow-up"
+                        })
+                .form-elements__column
+                    .form-elements__checkbox-buttons
+                        include ../checkboxButtons/checkboxButtons
+                        +checkboxButtons
+                    .form-elements__radio-buttons
+                        include ../radioButtons/radioButtons
+                        +radioButtons
+                    .form-elements__toggle-buttons
+                        include ../toggleButtons/toggleButtons
+                .form-elements__column
+                    .form-elements__range-slider
+                        include ../rangeSlider/rangeSlider
+                        +rangeSlider({
+                            text: "range slider"
+                        })

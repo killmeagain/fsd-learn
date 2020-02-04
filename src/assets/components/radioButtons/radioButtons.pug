@@ -1,15 +1,17 @@
 mixin radioButtons(props = {})
+    -const {title} = props
     .radio-buttons
-        .radio-buttons__title
-            include ../labelTitle/labelTitle
-            +labelTitle('radio buttons')
+        if (title === true)
+            .radio-buttons__title
+                include ../labelTitle/labelTitle
+                +labelTitle('radio buttons')
         .radio-buttons__button-wrapper
             .radio-buttons__button
                 include ../radio/radio
                 +radio({
                     title: 'Мужчина',
                     name: 'gender',
-                    value: man
+                    value: "man"
                 })(checked)
             .radio-buttons__button
                 include ../radio/radio

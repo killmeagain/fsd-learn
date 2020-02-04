@@ -5,7 +5,7 @@ import "./__index/__index.js";
         $('.dropdown').on('click', function (event) {
         let target = event.target;
 
-        if (target && $(target).parent().hasClass('dropdown__input')) {
+        if (target && $(target).parent().hasClass('form-input__input')) {
             $(this).find('.dropdown__list').toggleClass('dropdown__list_active');
             $(this).find('.input').toggleClass('input_hover_and_focus');
         }

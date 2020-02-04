@@ -1,0 +1,20 @@
+.search-room {
+    box-sizing: border-box;
+
+    max-width: 380px;
+    width: 100%;
+
+    padding-top: 40px;
+    padding-bottom: 30px;
+
+    background-color: #fff;
+
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+
+    border-radius: 4px;
+
+    @import "./__wrapper/__wrapper.scss";
+    @import "./__title/__title.scss";
+    @import "./__dropdown-date/__dropdown-date.scss";
+    @import "./__dropdown-guest/__dropdown-guest.scss";
+}

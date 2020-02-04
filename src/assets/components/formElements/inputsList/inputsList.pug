@@ -1,0 +1,34 @@
+ul.inputs-list
+    li.inputs-list__item
+        include ../../formInput/formInput
+        +formInput({
+            title: "text field",
+            status: "default",
+            value: "",
+            placeholder: "Email"
+        })
+    li.inputs-list__item
+        +formInput({
+            title: "text field",
+            status: "hover / focus",
+            value: "This is pretty awesome",
+            placeholder: "",
+            modifyInput: "hover_and_focus",
+            attr: "readonly"
+        })
+    li.inputs-list__item
+        +formInput({
+            title: "dropdown",
+            status: "default",
+            value: "Сколько гостей",
+            placeholder: "Сколько гостей",
+            modifyInput: "font-weight",
+            dropdown: true
+        })
+    li.inputs-list__item
+        +formInput({
+            title: "masked text field",
+            status: "default",
+            value: "",
+            placeholder: "ДД.ММ.ГГГГ"
+        })

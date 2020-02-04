@@ -1,7 +1,7 @@
 mixin input(props = {})
-    - const {value, placeholder, modifyInput} = props;
+    - const {value, placeholder, name, type, modifyInput} = props;
     if (modifyInput)
-        input.input(value = value, placeholder = placeholder, class = `input_${modifyInput}`)&attributes(attributes)
+        input.input(value = value, placeholder = placeholder, name = name, type = type, class = `input_${modifyInput}`)&attributes(attributes)
     else
         input.input(value = value, placeholder = placeholder)&attributes(attributes)
 

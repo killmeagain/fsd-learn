@@ -1,0 +1,30 @@
+.noUi-connect {
+    background: transparent;
+
+    background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+}
+.noUi-connects {
+    top: -0.9px;
+    height: 148%;
+}
+
+.noUi-handle {
+    width: 12px;
+    height: 12px;
+
+    background-image: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+
+    box-shadow: none;
+
+    top: -4px;
+    right: -11px;
+
+
+    &::after,
+    &::before {
+        content: none;
+    }
+}

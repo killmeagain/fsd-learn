@@ -1,0 +1,9 @@
+.toggle-buttons
+    .toggle-buttons__title
+        include ../labelTitle/labelTitle
+        +labelTitle("toggle")
+    .toggle-buttons__button
+        include ../toggle/toggle
+        +toggle()(checked)
+    .toggle-buttons__button
+        +toggle()

@@ -1,0 +1,15 @@
+&__input {
+    background: transparent;
+    border: none;
+
+    text-align: right;
+    text-transform: uppercase;
+
+    color: $darkShadeHalf;
+    font-family: $monseratRegular;
+    font-size: $smallTitle;
+    line-height: $smallTitleLineHeight;
+
+    cursor: default;
+    outline: none;
+}

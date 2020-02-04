@@ -1,0 +1,42 @@
+form.login
+    .login__wrapper
+        .login__title
+            include ../titleWidget/titleWidget
+            +titleWidget("Войти")
+        .login__input-name
+            label.login__label-input-email
+                include ../labelTitle/labelTitle
+                +labelTitle("Введите вашу почту")(class = "visually-hidden")
+                include ../input/input
+                +input({
+                    value: "",
+                    placeholder: "Email",
+                    name: "name",
+                    type: "text"
+                })
+        .login__input-password
+            label.login__label-input-password
+                include ../labelTitle/labelTitle
+                +labelTitle("Введите ваш пароль")(class = "visually-hidden")
+                include ../input/input
+                +input({
+                    value: "",
+                    placeholder: "Пароль",
+                    name: "name",
+                    type: "text"
+                })
+        .login__button-submit
+            include ../buttons/buttons
+            +buttons({
+                type: "submit",
+                text: "Войти"
+            })(class = "buttons_submit")
+        .login__register-link
+            span.login__description-link Нет аккаунта на Toxin?
+            .login__link-buttons
+                include ../linkButtons/linkButtons
+                +linkButtons({
+                    href: "#",
+                    text: "Создать",
+                    color: "white"
+                })

@@ -1,0 +1,9 @@
+.cards {
+    background-color: #e5e5e5;
+    margin: 0;
+    padding: 0;
+
+    @import "../search-room/search-room.scss";
+    @import "../login/login.scss";
+    @import "../registration/registration.scss";
+}

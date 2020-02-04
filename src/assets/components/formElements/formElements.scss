@@ -1,5 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.form-elements {
+    max-width: 1440px;
+    width: 100%;
+
+    margin: 0 auto;
+
+    @import "./__logo/__logo.scss";
+    @import "./__column/__column.scss";
+    @import "./__content-wrapper/__content-wrapper.scss";
+    @import "./__inputs-list/__inputs-list.scss";
+    @import "./__dropdown-date/__dropdown-date.scss";
+    @import "./__filter-dropdown-date/__filter-dropdown-date.scss";
+    @import "./__subscription-text-field/__subscription-text-field.scss";
+    @import "./__dropdown/__dropdown.scss";
+    @import "./__dropdown-expanded/__dropdown-expanded.scss";
+    @import "./__expandable-checkbox-list/__expandable-checkbox-list.scss";
+    @import "./__checkbox-buttons/__checkbox-buttons.scss";
+    @import "./__radio-buttons/__radio-buttons.scss";
+}
+
+
+
+
+
+
 @import "../input/input.scss";
-@import "../formInputs/formInputs.scss";
 @import "../dropdown/dropdown.scss";
 @import "../checkbox/checkbox.scss";
 @import "../checkboxButtons/checkboxButtons.scss";
@@ -13,3 +42,11 @@
 @import "../linkButtons/linkButtons.scss";
 @import "../buttons/buttons.scss";
 @import "../pagination/pagination.scss";
+@import "../rangeSlider/rangeSlider.scss";
+@import "../subscriptionTextField/subscriptionTextField.scss";
+@import "../formInput/formInput.scss";
+@import "../dropdown-date/dropdown-date.scss";
+@import "../filter-dropdown-date/filter-dropdown-date.scss";
+@import "../toggleButtons/toggleButtons.scss";
+
+@import "./inputsList/inputsList.scss";

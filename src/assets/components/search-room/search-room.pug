@@ -1,0 +1,27 @@
+form.search-room(action="")
+    .search-room__wrapper
+        .search-room__title
+            include ../titleWidget/titleWidget
+            +titleWidget('Найдем номера под ваши пожелания')
+        .search-room__dropdown-date
+            include ../dropdown-date/dropdown-date
+            +dropdown-date({
+                titleStart: "Въезд",
+                titleFinish: "Выезд"
+            })
+        .search-room__dropdown-guest
+            include ../dropdown/dropdown
+            +dropdown({
+                value: "",
+                placeholder: "Сколько гостей",
+                modifyInput: "border-top input_color-placeholder input_hover_and_focus",
+                dropdown: true,
+                dropdownGuest: true,
+                title: "Гости"
+            }, "Взрослые", "Дети", "Младенцы")(class = "dropdown_width_big")
+        .search-room__button-submit
+            include ../buttons/buttons
+            +buttons({
+                type: "submit",
+                text: "Подобрать номер"
+            })(class = "buttons_submit")
