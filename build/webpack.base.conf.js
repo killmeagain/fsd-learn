@@ -10,7 +10,7 @@ const webpack = require('webpack')
 const PATHS = {
   src: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist'),
-  assets: 'assets/'
+  assets: './assets/'
 }
 
 
@@ -29,7 +29,7 @@ module.exports = {
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
     path: PATHS.dist,
-    publicPath: '/'
+    // publicPath: './'
   },
   optimization: {
     splitChunks: {
