@@ -1,0 +1,16 @@
+&__sales {
+    max-width: 214px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: -25px;
+
+        width: 20px;
+        height: 20px;
+
+        background-image: url("/assets/img/tool-tip.svg");
+    }
+}

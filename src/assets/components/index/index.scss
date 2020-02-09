@@ -1,0 +1,12 @@
+.index {
+    min-height: 1000px;
+    width: 100%;
+
+    background-image: url("/assets/img/main-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @import "./__wrapper/__wrapper.scss";
+    @import "./__description/__description.scss";
+    @import "./__search-room/__search-room.scss";
+}

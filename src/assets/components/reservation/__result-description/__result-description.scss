@@ -1,0 +1,21 @@
+&__result-description {
+    font-family: $monseratBold;
+    font-size: 19px;
+    line-height: $middleTitleLineHeight;
+
+    color: $darkShadeBlack;
+
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        right: -179.5px;
+
+        width: 177px;
+        height: 1px;
+
+        border-bottom: 1px dashed $darkShadeFourth;
+    }
+}

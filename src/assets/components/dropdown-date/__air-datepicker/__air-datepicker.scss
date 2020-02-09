@@ -1,0 +1,10 @@
+&__air-datepicker {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+
+    display: none;
+
+    top: 69.56px;
+    @import "./_active/_active.scss";
+}

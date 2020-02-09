@@ -1,0 +1,15 @@
+&__result-price-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    width: 100%;
+
+    margin-bottom: 20px;
+    
+    font-family: $monseratRegular;
+    font-size: $body;
+    line-height: $middleTitleLineHeight;
+
+    color: $darkShadeGray;
+}

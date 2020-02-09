@@ -1,0 +1,17 @@
+&__navigation-link {
+    font-family: $monseratRegular;
+    font-size: $body;
+    line-height: 17px;
+
+    text-decoration: none;
+
+    color: $darkShadeHalf;
+
+    // transition: 0.6s;
+
+    &:hover {
+        font-weight: 700;
+        color: $darkShadeGray;
+        // transition: 0.6s;
+    }
+}

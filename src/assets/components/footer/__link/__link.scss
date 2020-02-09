@@ -1,0 +1,14 @@
+&__link {
+    font-family: $monseratRegular;
+    font-size: $body;
+    line-height: 17px;
+
+    color: $darkShadeHalf;
+
+    text-decoration: none;
+
+    &:hover {
+        font-weight: 700;
+        color: $darkShadeGray;
+    }
+}

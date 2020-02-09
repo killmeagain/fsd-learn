@@ -1,0 +1,22 @@
+.footer {
+    display: block;
+    width: 100%;
+
+    box-sizing: border-box;
+
+    background: #FFFFFF;
+    box-shadow: 0px 1px 0px rgba(31, 32, 65, 0.1);  
+
+    @import "./__wrapper/__wrapper.scss";
+    @import "./__description/__description.scss";
+    @import "./__logo/__logo.scss";
+    @import "./__logo-description/__logo-description.scss";
+    @import "./__navigation/__navigation.scss";
+    @import "./__link-list/__link-list.scss";
+    @import "./__nav-title/__nav-title.scss";
+    @import "./__link-item/__link-item.scss";
+    @import "./__link/__link.scss";
+    @import "./__subscribe-description/__subscribe-description.scss";
+    @import "./__copyright/__copyright.scss";
+
+}

@@ -1,0 +1,54 @@
+form.reservation
+    .reservation__wrapper
+        .reservation__title
+            .reservation__room
+                span.reservation__number-room №
+                include ../titleWidget/titleWidget
+                +titleWidget("888")
+                span.reservation__type-room люкс
+            .reservation__price-room
+                span.reservation__price 9 990₽
+                span.reservation__time в сутки
+        .reservation__dropdown-date
+            include ../dropdown-date/dropdown-date
+            +dropdown-date({
+                 titleStart: "Въезд",
+                 titleFinish: "Выезд"
+            })
+        .reservation__dropdown-guest
+            include ../dropdown/dropdown
+            +dropdown({
+                name: "guests",
+                type: "text",
+                value: "",
+                placeholder: "Сколько гостей",
+                modifyInput: "border-top input_color-placeholder",
+                dropdown: true,
+                dropdownGuest: true,
+                title: "Гости"
+            }, "Взрослые", "Дети", "Младенцы")(class = "dropdown_width_big")
+        ul.reservation__result-price-list
+            li.reservation__item
+                .reservation__calc-main-price
+                    span.reservation__main-price 9 990₽
+                    span.reservation__increase x
+                    span.reservation__multiplier 4 суток
+                span.reservation__result-main-price 39 960₽
+            li.reservation__item
+                .reservation__sales
+                    span.reservation__description-sales Сбор за услуги: скидка 
+                    span.reservation__sales-size 2 179₽
+                span.reservation__result-sales 0₽
+            li.reservation__item
+                .reservation__other-price
+                    span.reservation__other-price-description Сбор за дополнительные услуги
+                span.reservation__result-other-price 300₽
+            li.reservation__item
+                span.reservation__result-description Итого
+                span.reservation__result-price 38 081₽
+        .reservation__button-submit
+            include ../buttons/buttons
+            +buttons({
+                type: "submit",
+                text: "Войти"
+            })(class = "buttons_submit")

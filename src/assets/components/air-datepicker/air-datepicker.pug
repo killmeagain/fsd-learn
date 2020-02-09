@@ -1,0 +1,14 @@
+.air-datepicker
+    .air-datepicker__picker
+    .air-datepicker__controls
+        .air-datepicker__button-clear
+            include ../buttons/buttons
+            +buttons({
+                type: "button",
+                text: "Очистить"
+            })(class = 'buttons_color_grey')
+        .air-datepicker__button-apply
+            +buttons({
+                type: "button",
+                text: "Применить"
+            })

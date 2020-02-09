@@ -1,6 +1,6 @@
 mixin linkButtons(props = {})
-    -const {href, text, color} = props;
-    if (color == "white")
-        a.link-buttons(href = href, class = "link-buttons_bground_white")= text
+    -const {href, text, modify} = props;
+    if (modify)
+        a.link-buttons(href = href, class = `${modify}`)= text
     else
         a.link-buttons(href = href)= text

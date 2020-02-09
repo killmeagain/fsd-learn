@@ -2,7 +2,8 @@ import "./__button/__button";
 import "./__index/__index.js";
 
 (function () {
-        $('.dropdown').on('click', function (event) {
+
+    $('.dropdown').on('click', function (event) {
         let target = event.target;
 
         if (target && $(target).parent().hasClass('form-input__input')) {

@@ -1,0 +1,153 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        include ../header/header
+        +header({
+            login: false,
+            loginTitle: "Login",
+            loginLink: "#",
+            registerTitle: "Register",
+            registerLink: "#",
+            linkList: [
+                {
+                    title: "Home",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "About Us",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Services",
+                    dropdown: true,
+                    href: "#"
+                },
+                {
+                    title: "Careers",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "News",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Documentation",
+                    dropdown: false,
+                    href: "#"
+                }
+            ]
+        })
+
+        +header({
+            login: true,
+            loginTitle: "Login",
+            loginLink: "#",
+            registerTitle: "Register",
+            registerLink: "#",
+            linkList: [
+                {
+                    title: "Home",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "About Us",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Servises",
+                    dropdown: true,
+                    href: "#"
+                },
+                {
+                    title: "Careers",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "News",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Documentation",
+                    dropdown: false,
+                    href: "#"
+                }
+            ]
+        })
+
+        include ../footer/footer
+        +footer({
+            description: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+            navTitle: "navigation",
+            navList: [
+                {
+                    title: "About Us",
+                    href: "#"
+                },
+                {
+                    title: "News",
+                    href: "#"
+                },
+                {
+                    title: "Support",
+                    href: "#"
+                },
+                {
+                    title: "Products",
+                    href: "#"
+                }
+            ],
+            aboutTitle: "About Us",
+            aboutList: [
+                {
+                    title: "Who we are",
+                    href: "#"
+                },
+                {
+                    title: "Our teem",
+                    href: "#"
+                },
+                {
+                    title: "Careers",
+                    href: "#"
+                },
+                {
+                    title: "Investors",
+                    href: "#"
+                }
+            ],
+            supportTitle: "Support",
+            supportList: [
+                {
+                    title: "Documentation",
+                    href: "#"
+                },
+                {
+                    title: "Community",
+                    href: "#"
+                },
+                {
+                    title: "Get in touch",
+                    href: "#"
+                }
+            ],
+            subscribeTitle: "Subscribe to our newsletter",
+            subscribeDescription: "Receive our latest news and promotions in your inbox!"
+        })
+
+        include ../footer-second/footer-second
+        +footer-second({
+            descriprion: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+        })

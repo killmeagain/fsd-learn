@@ -1,0 +1,9 @@
+&__navigation-item {
+    margin-right: 20px;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    @import "./_dropdown-menu/_dropdown-menu.scss";
+}

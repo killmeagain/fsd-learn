@@ -10,4 +10,7 @@
     &__input-start {
         width: 150px;
     }
+    position: relative;
+
+    @import "./__air-datepicker/__air-datepicker.scss";
 }

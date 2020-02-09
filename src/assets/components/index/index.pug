@@ -1,0 +1,107 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body
+        include ../header/header
+        +header({
+            login: false,
+            loginTitle: "Войти",
+            loginLink: "/login-page.html",
+            registerTitle: "Зарегистрироваться",
+            registerLink: "/registration-page.html",
+            linkList: [
+                {
+                    title: "О нас",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Услуги",
+                    dropdown: true,
+                    href: "#"
+                },
+                {
+                    title: "Вакансии",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Новости",
+                    dropdown: false,
+                    href: "#"
+                },
+                {
+                    title: "Соглашения",
+                    dropdown: false,
+                    href: "#"
+                }
+            ]
+        })
+        main.index
+            .index__wrapper
+                .index__search-room
+                    include ../search-room/search-room
+                p.index__description Лучшие номера для вашей работы, отдыха и просто вдохновения          
+        include ../footer/footer
+        +footer({
+            description: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+            navTitle: "Навигация",
+            navList: [
+                {
+                    title: "О нас",
+                    href: "#"
+                },
+                {
+                    title: "Новости",
+                    href: "#"
+                },
+                {
+                    title: "Служба поддержки",
+                    href: "#"
+                },
+                {
+                    title: "Услуги",
+                    href: "#"
+                }
+            ],
+            aboutTitle: "О нас",
+            aboutList: [
+                {
+                    title: "О сервисе",
+                    href: "#"
+                },
+                {
+                    title: "Наша команда",
+                    href: "#"
+                },
+                {
+                    title: "Вакансии",
+                    href: "#"
+                },
+                {
+                    title: "Инвесторы",
+                    href: "#"
+                }
+            ],
+            supportTitle: "Служба поддержки",
+            supportList: [
+                {
+                    title: "Соглашения",
+                    href: "#"
+                },
+                {
+                    title: "Сообщества",
+                    href: "#"
+                },
+                {
+                    title: "Связь с нами",
+                    href: "#"
+                }
+            ],
+            subscribeTitle: "Подписка",
+            subscribeDescription: "Получайте специальные предложения и новости сервиса",
+            copyright: "Copyright © 2018 Toxin отель. Все права зачищены."
+        })

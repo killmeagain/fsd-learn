@@ -9,6 +9,7 @@ import './assets/components/expandableCheckboxList/expandableCheckboxList';
 import './assets/components/likeButton/likeButton';
 import './assets/components/dropdown/dropdown';
 import './assets/components/rangeSlider/rangeSlider';
+import './assets/components/dropdown-date/dropdown-date';
 
 
 
