@@ -28,8 +28,7 @@ module.exports = {
   },
   output: {
     filename: `${PATHS.assets}js/[name].[hash].js`,
-    path: PATHS.dist,
-    publicPath: '/'
+    path: PATHS.dist
   },
   optimization: {
     splitChunks: {
@@ -61,21 +60,30 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: 'assets/fonts/[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: `${PATHS.assets}fonts`,
+        publicPath: '../fonts/'
       },
       exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}img`)
-    }, {
+    },
+    {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: 'assets/img/[name].[ext]',
+        name: '[name].[ext]',
+        outputPath: `${PATHS.assets}img`,
+        publicPath: '../img/'
       },
       exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`)
-    }, {
+    }, 
+    {
       test: /\.scss$/,
       use: [
         'style-loader',
-        MiniCssExtractPlugin.loader,
+        {
+          loader: MiniCssExtractPlugin.loader,
+          options: { publicPath: '/' }
+        },
         {
           loader: 'css-loader',
           options: { sourceMap: true }
@@ -91,10 +99,10 @@ module.exports = {
       test: /\.css$/,
       use: [
         'style-loader',
-        MiniCssExtractPlugin.loader,
+         MiniCssExtractPlugin.loader,
         {
           loader: 'css-loader',
-          options: { sourceMap: true }
+          options: { sourceMap: true}
         }, {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
@@ -109,7 +117,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].[hash].css`,
+      filename: `assets/css/[name].[hash].css`
     }),
     // new CopyWebpackPlugin([
     //   { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
