@@ -19,7 +19,7 @@
 
 &__input:checked + &__box {
     border-color: $purple;
-    background-image: url("/assets/img/checked.svg");
+    background-image: url("../img/checked.svg");
     background-repeat: no-repeat;
     background-position: 56% 38%;
     background-size: 11px 11px;

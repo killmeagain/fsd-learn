@@ -61,14 +61,16 @@ module.exports = {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
-      }
+        name: 'assets/fonts/[name].[ext]'
+      },
+      exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}img`)
     }, {
       test: /\.(png|jpg|gif|svg)$/,
       loader: 'file-loader',
       options: {
-        name: '[name].[ext]'
-      }
+        name: 'assets/img/[name].[ext]',
+      },
+      exclude: path.resolve(__dirname, `${PATHS.src}/${PATHS.assets}fonts`)
     }, {
       test: /\.scss$/,
       use: [
@@ -109,11 +111,12 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: `${PATHS.assets}css/[name].[hash].css`,
     }),
-    new CopyWebpackPlugin([
-      { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
-      { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` }
-      // { from: `${PATHS.src}/static`, to: '' },
-    ]),
+    // new CopyWebpackPlugin([
+    //   { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+    //   { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` }
+    //   // { from: `${PATHS.src}/static`, to: '' },
+      
+    // ]),
 
     ...PAGES.map(page => new HtmlWebpackPlugin({
       template: `${PAGES_DIR}/${page}`,

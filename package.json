@@ -32,7 +32,8 @@
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
     "webpack-dev-server": "^3.9.0",
-    "webpack-merge": "^4.2.2"
+    "webpack-merge": "^4.2.2",
+    "gh-pages": "^2.2.0"
   },
   "dependencies": {
     "air-datepicker": "^2.2.3",
