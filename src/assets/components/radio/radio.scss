@@ -1,5 +1,7 @@
 .radio {
-    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
     box-sizing: border-box;
     @import "./__input/__input.scss";

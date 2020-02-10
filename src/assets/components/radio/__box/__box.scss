@@ -1,7 +1,9 @@
 &__box {
     width: 20px;
     height: 20px;
-    position: absolute;
+
+    margin-right: 10px;
+    position: relative;
 
     border: 1px solid $darkShadeFourth;
     border-radius: 50%;
@@ -9,7 +11,6 @@
     box-sizing: border-box;
 
     display: block;
-    margin-right: -30px;
 
     &:hover {
         border-color: $purple;

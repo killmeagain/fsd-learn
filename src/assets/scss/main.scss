@@ -10,10 +10,15 @@
 @import "./fonts.scss";
 @import "./vars.scss";
 
+
+//  UI-kit
 @import "../components/colorAndTypes/colorAndTypes.scss";
 @import "../components/formElements/formElements.scss";
 @import "../components/cards/cards.scss";
 @import "../components/headers-and-footers/headers-and-footers.scss";
+
+
+// Pages
 @import "./index/index.scss";
 @import "./login-page/login-page.scss";
 @import "./registration-page/registration-page.scss";
