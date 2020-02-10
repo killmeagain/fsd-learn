@@ -1,0 +1,14 @@
+.registration-page {
+    min-height: 100vh;
+    width: 100%;
+
+    background-image: url("../img/registration-and-login-bg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @import "./__form-registration/__form-registration.scss";
+}

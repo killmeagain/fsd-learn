@@ -1,11 +1,12 @@
 doctype html
-html(lang="en")
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Toxin - сеть отелей
+        title
+            block title
     body
-        include ../header/header
+        include ../../components/header/header
         +header({
             login: false,
             loginTitle: "Войти",
@@ -40,12 +41,9 @@ html(lang="en")
                 }
             ]
         })
-        main.index
-            .index__wrapper
-                .index__search-room
-                    include ../search-room/search-room
-                p.index__description Лучшие номера для вашей работы, отдыха и просто вдохновения          
-        include ../footer/footer
+        block content
+        
+        include ../../components/footer/footer
         +footer({
             description: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
             navTitle: "Навигация",

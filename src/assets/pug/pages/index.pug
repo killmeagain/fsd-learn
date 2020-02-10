@@ -1,1 +1,11 @@
-include ../../components/index/index
+extends ../template/template-index
+
+block title
+	| TOXIN - сайт по подбору номеров!
+
+block content
+	main.index
+		.index__wrapper
+			.index__search-room
+				include ../../components/search-room/search-room
+			p.index__description Лучшие номера для вашей работы, отдыха и просто вдохновения
