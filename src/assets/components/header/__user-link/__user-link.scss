@@ -7,8 +7,10 @@
 
     text-decoration: none;
 
+    transition: 0.2s;
+
     &:hover {
-        font-weight: 700;
-        color: $darkShadeGray;
+        color: $darkShadeBlack;
+        transition: 0.2s;
     }
 }

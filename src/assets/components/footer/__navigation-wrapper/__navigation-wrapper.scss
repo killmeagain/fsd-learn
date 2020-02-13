@@ -1,0 +1,31 @@
+&__navigation-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    box-sizing: border-box;
+
+    width: 80%;
+
+    @media screen and (max-width: 1350px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1150px) {
+        width: 550px;
+
+        margin: 0 auto;
+        flex-wrap: wrap;
+
+        padding: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+
+        width: 100%;
+
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,23 @@
+&__button {
+    display: none;
+
+    text-transform: uppercase;
+
+    font-family: $monseratBold;
+    font-size: 14px;
+    line-height: 19px;
+    
+    margin-top: 10px;
+    border-top: 1px solid $darkShadeLight;
+    border-bottom: 1px solid $darkShadeLight;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+    &__button {
+        display: block;
+        cursor: pointer;
+    }
+}

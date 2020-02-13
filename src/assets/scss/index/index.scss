@@ -6,6 +6,15 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
+    @media screen and (max-width: 1200px) {
+        min-height: 0;
+    }
+
+    @media screen and (max-width: 380px) {
+        background-image: none;
+        background-color: #fff;
+    }
+
     @import "./__wrapper/__wrapper.scss";
     @import "./__description/__description.scss";
     @import "./__search-room/__search-room.scss";

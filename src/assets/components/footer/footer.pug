@@ -29,37 +29,38 @@ mixin footer(props = {})
                         </defs>
                         </svg>
                 p.footer__logo-description= description
-            .footer__navigation
-                .footer__nav-title
-                    include ../labelTitle/labelTitle
-                    +labelTitle(navTitle)
-                ul.footer__link-list
-                    each nav in navList
-                        li.footer__link-item
-                            a.footer__link(href= nav.href)= nav.title
-            .footer__navigation
-                .footer__nav-title
-                    include ../labelTitle/labelTitle
-                    +labelTitle(aboutTitle)
-                ul.footer__link-list
-                    each about in aboutList
-                        li.footer__link-item
-                            a.footer__link(href= about.href)= about.title
-            .footer__navigation
-                .footer__nav-title
-                    include ../labelTitle/labelTitle
-                    +labelTitle(supportTitle)
-                ul.footer__link-list
-                    each support in supportList
-                        li.footer__link-item
-                            a.footer__link(href= support.href)= support.title
-            .footer__navigation
-                .footer__nav-title
-                    include ../labelTitle/labelTitle
-                    +labelTitle(subscribeTitle)
-                p.footer__subscribe-description= subscribeDescription
-                form.footer__subscrive-form(action="")
-                    include ../subscriptionTextField/subscriptionTextField
+            .footer__navigation-wrapper
+                .footer__navigation
+                    .footer__nav-title
+                        include ../labelTitle/labelTitle
+                        +labelTitle(navTitle)
+                    ul.footer__link-list
+                        each nav in navList
+                            li.footer__link-item
+                                a.footer__link(href= nav.href)= nav.title
+                .footer__navigation
+                    .footer__nav-title
+                        include ../labelTitle/labelTitle
+                        +labelTitle(aboutTitle)
+                    ul.footer__link-list
+                        each about in aboutList
+                            li.footer__link-item
+                                a.footer__link(href= about.href)= about.title
+                .footer__navigation
+                    .footer__nav-title
+                        include ../labelTitle/labelTitle
+                        +labelTitle(supportTitle)
+                    ul.footer__link-list
+                        each support in supportList
+                            li.footer__link-item
+                                a.footer__link(href= support.href)= support.title
+                .footer__navigation
+                    .footer__nav-title
+                        include ../labelTitle/labelTitle
+                        +labelTitle(subscribeTitle)
+                    p.footer__subscribe-description= subscribeDescription
+                    form.footer__subscrive-form(action="")
+                        include ../subscriptionTextField/subscriptionTextField
         .footer__copyright
             include ../copyright/copyright
             +copyright({

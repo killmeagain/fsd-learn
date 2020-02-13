@@ -5,4 +5,13 @@
     &:last-child {
         margin: 0;
     }
+
+    @media screen and (max-width: 1200px){
+        & {
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $darkShadeLight;
+        }
+    }
 }
