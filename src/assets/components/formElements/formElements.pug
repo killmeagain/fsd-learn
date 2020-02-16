@@ -44,12 +44,76 @@ html(lang="ru")
                         }, "Спальни", "Кровати", "Ванные комнаты")
                     .form-elements__expandable-checkbox-list
                         include ../expandableCheckboxList/expandableCheckboxList
-                        +expandableCheckboxList
+                        +expandableCheckboxList({},
+                        {
+                            title: 'Завтрак',
+                            checked: false
+                        },
+                        {
+                            title: 'Письменный стол',
+                            checked: true
+                        },
+                        {
+                            title: 'Стул для кормления',
+                            checked: true
+                        },
+                        {
+                            title: 'Кроватка',
+                            checked: true
+                        },
+                        {
+                            title: 'Телевизор',
+                            checked: false
+                        },
+                        {
+                            title: 'Шампунь',
+                            checked: false
+                        },
+                        {
+                            title: 'Телевизор',
+                            checked: false
+                        },
+                        {
+                            title: 'Шампунь',
+                            checked: false
+                        })
                     .form-elements__expandable-checkbox-list-expanded
                         include ../expandableCheckboxList/expandableCheckboxList
                         +expandableCheckboxList({
                             modifyList: "expandable-checkbox-list__list_active",
                             modifyTitle: "expandable-checkbox-list__title_arrow-up"
+                        },
+                        {
+                            title: 'Завтрак',
+                            checked: false
+                        },
+                        {
+                            title: 'Письменный стол',
+                            checked: true
+                        },
+                        {
+                            title: 'Стул для кормления',
+                            checked: true
+                        },
+                        {
+                            title: 'Кроватка',
+                            checked: true
+                        },
+                        {
+                            title: 'Телевизор',
+                            checked: false
+                        },
+                        {
+                            title: 'Шампунь',
+                            checked: false
+                        },
+                        {
+                            title: 'Телевизор',
+                            checked: false
+                        },
+                        {
+                            title: 'Шампунь',
+                            checked: false
                         })
                 .form-elements__column
                     .form-elements__checkbox-buttons

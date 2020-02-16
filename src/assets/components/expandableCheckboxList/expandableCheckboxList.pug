@@ -1,49 +1,39 @@
-mixin expandableCheckboxList(props = {})
+mixin expandableCheckboxList(props = {}, ...checkboxes)
     -const {modifyList, modifyTitle} = props;
-    .expandable-checkbox-list
-        .expandable-checkbox-list__title(class= modifyTitle)
-            include ../labelTitle/labelTitle
-            +labelTitle('expandable checkbox list')
-        ul.expandable-checkbox-list__list(class= modifyList)
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Завтрак'
-                })
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Письменный стол'
-                })(checked)
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Стул для кормления'
-                })(checked)
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Кроватка'
-                })(checked)
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Телевизор'
-                })
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Шампунь'
-                })
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Телевизор'
-                })
-            li.expandable-checkbox-list__item
-                include ../checkbox/checkbox
-                +checkbox({
-                    text: 'Шампунь'
-                })
+    if (modifyList && modifyTitle)
+        .expandable-checkbox-list.js-expandable-checkbox-list
+            .expandable-checkbox-list__title.js-expandable-checkbox-list__title(class= modifyTitle)
+                include ../labelTitle/labelTitle
+                +labelTitle('expandable checkbox list')
+            ul.expandable-checkbox-list__list.js-expandable-checkbox-list__list(class= modifyList)
+                each checkbox in checkboxes
+                    li.expandable-checkbox-list__item
+                        include ../checkbox/checkbox
+                        include ../checkbox/checkbox
+                        if (checkbox.checked)
+                            +checkbox({
+                                text: checkbox.title
+                            })(checked)
+                        else
+                            +checkbox({
+                                text: checkbox.title
+                            })
+    else
+        .expandable-checkbox-list.js-expandable-checkbox-list
+            .expandable-checkbox-list__title.js-expandable-checkbox-list__title
+                include ../labelTitle/labelTitle
+                +labelTitle('expandable checkbox list')
+            ul.expandable-checkbox-list__list.js-expandable-checkbox-list__list
+                each checkbox in checkboxes
+                    li.expandable-checkbox-list__item
+                        include ../checkbox/checkbox
+                        if (checkbox.checked)
+                            +checkbox({
+                                text: checkbox.title
+                            })(checked)
+                        else
+                            +checkbox({
+                                text: checkbox.title
+                            })
             
         
